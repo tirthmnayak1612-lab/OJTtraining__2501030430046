@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Car Website</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:200vh;
+    font-family:Arial, sans-serif;
+
+    /* default background */
+    background-image:url("images/car1.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    transition: background-image 0.8s ease-in-out;
+}
+
+/* Header/Navbar */
+header{
+    width:100%;
+    background:rgb(12, 12, 11);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 50px;
+
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+/* Logo */
+.logo{
+    color:rgb(127, 131, 113);
+    font-family:'Times New Roman', Times, serif;
+    font-size:40px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+}
+
+/* Logo Image */
+.logo img{
+    height:50px;
+    margin-right:10px;
+}
+
+/* Menu */
+nav a{
+    color:rgb(224, 17, 17);
+    text-decoration:none;
+    margin-left:30px;
+    font-size:20px;
+}
+
+nav a:hover{
+    color:red;
+}
+
+/* Button */
+.btn{
+    border:2px solid white;
+    padding:10px 20px;
+    border-radius:30px;
+    color:white;
+    text-decoration:none;
+}
+
+/* Content */
+.content{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+    text-align:center;
+    background:rgba(0,0,0,0.4);
+}
+
+.content h1{
+    font-size:70px;
+}
+
+.content p{
+    font-size:25px;
+}
+#section1 h1{
+    font-size:70px;
+    color:rgb(226, 213, 28);
+}
+
+#section1 p{
+    font-size:25px;
+    color:white;
+}
+
+/* Section 2 */
+#section2 h1{
+    font-size:70px;
+    color:rgb(189, 96, 34);
+}
+
+#section2 p{
+    font-size:25px;
+    color:lightblue;
+}
+
+/* Section 3 */
+#section3 h1{
+    font-size:70px;
+    color:rgb(230, 21, 21);
+}
+
+#section3 p{
+    font-size:25px;
+    color:white;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="C:\Users\Student\Pictures\images.jpg" alt="Logo">
+        Auto-Motive
+    </div>
+
+    <nav>
+        <a href="home.html">Home</a> 
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="pre-owned.html">Pre-Owned</a>
+    </nav>
+
+    <a href="#" class="btn">Contact Us</a>
+
+</header>
+
+<section class="content" id="section1">
+    <h1>Luxury Cars</h1>
+    <p>Experience Speed & Style</p>
+    
+</section>
+
+<section class="content" id="section2">
+    <h1>Sports Cars</h1>
+    <p>Power & Performance</p>
+</section>
+
+<section class="content" id="section3">
+    <h1>Super Cars</h1>
+    <p>Ultimate Driving Machine</p>
+</section>
+
+<script>
+const images = [
+    "C:/Users/Student/Pictures/HD-wallpaper-rolls-royce-rolls-royce-phantom-car-rolls-royce-luxury-car-blue-car.jpg",
+    "C:/Users/Student/Downloads/pexels-fbo-media-535159577-35832731.jpg",
+    "C:/Users/Student/Pictures/360_F_411902117_f3vhGfkplW40zNoPf8AfviNvBkkUPbPu.jpg"
+];
+
+window.addEventListener("scroll", function () {
+
+    let scrollPos = window.scrollY;
+    let sectionHeight = window.innerHeight;
+
+    if (scrollPos < sectionHeight) {
+        document.body.style.backgroundImage = `url('${images[0]}')`;
+    }
+    else if (scrollPos < sectionHeight * 2) {
+        document.body.style.backgroundImage = `url('${images[1]}')`;
+    }
+    else {
+        document.body.style.backgroundImage = `url('${images[2]}')`;
+    }
+
+});
+</script>
+
+</body>
+</html>
