@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Holy Grail Layout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        nav {
+            background-color: lightblue;
+            width: 20%;
+            padding: 20px;
+        }
+
+        main {
+            background-color: lightgray;
+            width: 60%;
+            padding: 20px;
+        }
+
+        aside {
+            background-color: lightpink;
+            width: 20%;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Header</h1>
+    </header>
+
+    <div class="container">
+
+        <nav>
+            <h2>Left Sidebar</h2>
+            <p>Navigation Links</p>
+        </nav>
+
+        <main>
+            <h2>Main Content</h2>
+            <p>This is the main section of the page.</p>
+        </main>
+
+        <aside>
+            <h2>Right Sidebar</h2>
+            <p>Additional Information</p>
+        </aside>
+
+    </div>
+
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+
+</body>
+</html>

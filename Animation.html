@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animation Using Transform in CSS</title>
+
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            color: white;
+            line-height: 150px;
+            font-size: 24px;
+            margin: auto;
+
+            /* Animation Effect */
+            transition: transform 1s, background-color 1s;
+        }
+
+        .box:hover {
+            transform: rotate(45deg) scale(1.2) translateX(50px);
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        Hover Me
+    </div>
+
+</body>
+</html>
